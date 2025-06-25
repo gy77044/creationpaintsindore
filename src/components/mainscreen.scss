@@ -1,0 +1,65 @@
+
+
+.maincss {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-100px); /* Start 100px to the left of center */
+  animation: moveToCenter 2s forwards;
+}
+
+@keyframes moveToCenter {
+  0% {
+    transform: translateX(100px); /* Start 100px to the right of center */
+  }
+  100% {
+    transform: translateX(-50%); /* Centered */
+  }
+}
+
+.fa {
+//   padding: 20px;
+  font-size: 15px;
+//   width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  color: white;
+}
+
+.fa-twitter {
+  color: white;
+}
+
+.fa-google {
+  color: white;
+}
+
+.fa-linkedin {
+  color: white;
+}
+
+.fa-youtube {
+  color: white;
+}
+
+.fa-instagram {
+  color: white;
+}
+
+
+/* global.css */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
