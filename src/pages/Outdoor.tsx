@@ -17,9 +17,9 @@ const Outdoor = () => {
               <br/>
               <br/>
               <ColourInspirationSection />
-              <br/>
-              <br/>
-              <InteractiveCard/>
+              {/* <br/> */}
+              {/* <br/> */}
+              {/* <InteractiveCard/> */}
               <br/>
               <br/>
               <PaintProductCards/>

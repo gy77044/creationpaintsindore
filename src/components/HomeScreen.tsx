@@ -14,6 +14,7 @@ import ImageCard from "./ImageCard";
 import PaintProductCards from "./PaintProductCard";
 import PaintShades from './PaintShades';
 import Hero from "./StickSlider";
+import MapLocation from "./MapLocation";
 
 const imageData = [
   {
@@ -74,6 +75,7 @@ const HomeScreen = () => {
       </section>
 <AboutCompany/>
  <GetInTouchForm />
+ <MapLocation/>
 <Footer/>
 
  {/* Brochure and Social Media Icons */}
@@ -125,20 +127,6 @@ const HomeScreen = () => {
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
       alt="Facebook"
-      className="w-4 h-4"
-    />
-  </a>
-
-  {/* YouTube */}
-  <a
-  href="https://youtube.com/yourchannel"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-red-600 p-1 rounded-full shadow transition-all duration-300 transform hover:scale-125 hover:bg-red-700"
->
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
-      alt="YouTube"
       className="w-4 h-4"
     />
   </a>

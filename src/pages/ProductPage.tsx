@@ -9,59 +9,68 @@ import tank from '../../public/assests/tank.png';
 import greenbalti from '../../public/assests/greenbalti.png';
 import acrylicbalti from '../../public/assests/acrylicbalti.png';
 import PaintDetailSection from "../components/PaintDetailSection";
+import distemper from '../../public/assests/dd.jpg';
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const blogCards = [
   {
-    id:0,
+    id: 0,
     title: "CREATION Metallic Emulsion | Rich Metallic Finish | Premium Interior Wall Paint | Luxury Look | Smooth Sheen Effect | Long-Lasting Color",
     category: "Premium",
     img: smallbalti,
     description: "Creation Paints' Metallic Paints bring elegance and shine to your walls with a smooth, reflective finish. Ideal for feature walls, they offer durability, luxury, and a rich decorative appeal.",
   },
   {
-    id:1,
-    title: "CREATION Acrylic Distemper | Smooth Matte Finish | Affordable Wall Paint | Easy Application | Quick Dry | Ideal for Interiors",
-    category: "Premium",
-    img: orangebalti,
-    description: "CreationPaints Acrylic Distemper delivers a smooth, matte finish at an economical price. Perfect for interior walls, it offers easy application, quick drying, and vibrant coverage",
-  },
-  {
-    id:2,
-    title: "CREATION Exterior Sheen Emulsion | Weather-Resistant Finish | Durable Exterior Paint | Rich Sheen | UV Protection | Vibrant Colors for Outer Walls",
-    category: "Premium",
-    img: greenbalti,
-    description: "CreationPaints Exterior Sheen Emulsion offers a weather-resistant, glossy finish for outer walls. Long-lasting protection, vibrant look, and UV resistance—perfect for all seasonal conditions.",
-  },
-  {
-    id:3,
-    title: "CREATION Interior Emulsion | Smooth Matte Finish | Elegant Wall Paint | Easy-to-Clean | Low Odor | Rich Colors for Interior Walls",
-    category: "Premium",
-    img: pinkbalti,
-    description: "CreationPaints Interior Emulsion brings a soft matte finish to your walls. Ideal for modern interiors, it’s low-odor, washable, and delivers vibrant, long-lasting color effortlessly",
-  },
-  {
-    id:4,
-    title: "CREATION Acrylic Primer | Interior & Exterior Use | Superior Adhesion | Smooth Base Coat | Quick Dry | Enhances Paint Durability",
-    category: "Premium",
-    img: acrylicbalti,
-    description: "CreationPaints Acrylic Primer offers excellent adhesion and a smooth base coat for all surfaces. Ideal for both interiors and exteriors, ensuring lasting paint performance and durability.",
-  },
-  {
-    id:5,
+    id: 1,
     title: "Creation Platinum Luxury Emulsion | High Gloss Finish | Ultra-Rich Look | Premium Interior Paint | Elegant Sheen | Long-Lasting Brilliance",
     category: "Premium",
     img: blackbalti,
     description: "Creation Platinum Luxury Emulsion delivers a dazzling high-gloss finish with a rich, premium feel. Perfect for elegant interiors needing long-lasting brilliance, smoothness, and superior washability",
   },
   {
-    id:6,
+    id: 2,
+    title: "CREATION Exterior Sheen Emulsion | Weather-Resistant Finish | Durable Exterior Paint | Rich Sheen | UV Protection | Vibrant Colors for Outer Walls",
+    category: "Premium",
+    img: greenbalti,
+    description: "CreationPaints Exterior Sheen Emulsion offers a weather-resistant, glossy finish for outer walls. Long-lasting protection, vibrant look, and UV resistance—perfect for all seasonal conditions.",
+  },
+  {
+    id: 3,
+    title: "CREATION Interior Emulsion | Smooth Matte Finish | Elegant Wall Paint | Easy-to-Clean | Low Odor | Rich Colors for Interior Walls",
+    category: "Premium",
+    img: pinkbalti,
+    description: "CreationPaints Interior Emulsion brings a soft matte finish to your walls. Ideal for modern interiors, it’s low-odor, washable, and delivers vibrant, long-lasting color effortlessly",
+  },
+  {
+    id: 4,
+    title: "CREATION Acrylic Primer | Interior & Exterior Use | Superior Adhesion | Smooth Base Coat | Quick Dry | Enhances Paint Durability",
+    category: "Premium",
+    img: acrylicbalti,
+    description: "CreationPaints Acrylic Primer offers excellent adhesion and a smooth base coat for all surfaces. Ideal for both interiors and exteriors, ensuring lasting paint performance and durability.",
+  },
+  {
+    id: 5,
+    title: "CREATION Acrylic Distemper | Smooth Matte Finish | Affordable Wall Paint | Easy Application | Quick Dry | Ideal for Interiors",
+    category: "Premium",
+    img: orangebalti,
+    description: "CreationPaints Acrylic Distemper delivers a smooth, matte finish at an economical price. Perfect for interior walls, it offers easy application, quick drying, and vibrant coverage",
+  },
+  {
+    id: 6,
+    title: "Creation Acrylic Distemper | 1 - 4 Kilogram Packet | Distemper | Multipurpose Use | Durable Base Coat | Ideal for Large-Scale Projects",
+    category: "Premium",
+    img: distemper,
+    description: "CreationPaints Acrylic Distemper Packet is Strong adhesion, fast-drying, and eco-safe formula for both interior and exterior surfaces.",
+  },
+  {
+    id: 7,
     title: "Eco Ext./Int. Primer | 50 Litre Drum | Heavy-Duty Primer | Multipurpose Use | Durable Base Coat | Ideal for Large-Scale Projects",
     category: "Premium",
     img: tank,
     description: "CreationPaints Eco Ext./Int. Primer in a 50-litre drum is perfect for bulk application. Strong adhesion, fast-drying, and eco-safe formula for both interior and exterior surfaces.",
   },
 ];
+
 
 const ProductPage: React.FC = () => {
   const nav = useLocation(),route = useNavigate();

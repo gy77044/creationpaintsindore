@@ -1,11 +1,31 @@
-import React from "react";
-import bucketImage from "../../../public/assests/allimg/blueIndoor.jpeg"; // Update with correct path
-
+import React, { useEffect, useState } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import image1 from "../../../public/assests/allimg/blueIndoor.jpeg";
+import image2 from "../../../public/assests/allimg/skyblueIndoor.jpeg";
+import image3 from "../../../public/assests/allimg/NaturalGreen.jpeg";
+import image4 from "../../../public/assests/allimg/yelloIndor.jpeg";
+const images = [image1, image2, image3, image4];
 const ProductHighlight: React.FC = () => {
+   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+   useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div className="relative mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pt-4 lg:pr-8">
             <div className="lg:max-w-lg">
               <h2 className="text-base font-semibold text-sky-600 transition-transform duration-500 hover:scale-105 hover:shadow-slate-950">
@@ -31,11 +51,27 @@ const ProductHighlight: React.FC = () => {
                     >
                       <path d="M3 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v4a2 2 0 0 1-2 2H9v2h2a1 1 0 0 1 1 1v5.586l1.293-1.293a1 1 0 1 1 1.414 1.414l-3 3A1 1 0 0 1 10 21v-7H9a1 1 0 0 1-1-1v-2H5a2 2 0 0 1-2-2V4Zm2 1v4h11V5H5Z" />
                     </svg>
-                    Metallic Emulsion—
+                    Metallic Emulsion (W.B.)—
                   </dt>
                   <dd className="inline">
-                    Premium interior emulsion with a shimmering metallic finish
-                    that adds depth, elegance, and durability to interior walls.
+                    Luxurious water-based emulsion with a shimmering metallic finish, adding elegance, depth, and durability to modern interior walls.
+                  </dd>
+                </div>
+                <div className="relative pl-9">
+                  <dt className="inline font-semibold text-gray-900 animate-new-color-change">
+                    <svg
+                      className="absolute top-1 left-1 size-5 text-green-600"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <path d="M3 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v4a2 2 0 0 1-2 2H9v2h2a1 1 0 0 1 1 1v5.586l1.293-1.293a1 1 0 1 1 1.414 1.414l-3 3A1 1 0 0 1 10 21v-7H9a1 1 0 0 1-1-1v-2H5a2 2 0 0 1-2-2V4Zm2 1v4h11V5H5Z" />
+                    </svg>
+                    Creation Platinum Hi-Gloss WaterBase Enamel—
+                  </dt>
+                  <dd className="inline">
+                    High-gloss water-based enamel with excellent durability, stain resistance, and a mirror-like finish for wood, metal, and wall surfaces.
                   </dd>
                 </div>
                 <div className="relative pl-9">
@@ -49,12 +85,10 @@ const ProductHighlight: React.FC = () => {
                     >
                       <path d="M4 3a1 1 0 0 0-1 1v6a2 2 0 0 0 2 2h10v2H9a1 1 0 0 0 0 2h3v6a1 1 0 0 0 1.707.707l3-3a1 1 0 0 0-1.414-1.414L13 19.586V14h2a1 1 0 0 0 1-1v-2h2a2 2 0 0 0 2-2V4a1 1 0 0 0-1-1H4Zm1 2h14v6H5V5Z" />
                     </svg>
-                    Luxury Silk Emulsion—
+                    Creation Luxury Emulsion—
                   </dt>
                   <dd className="inline">
-                    A high-end exterior paint offering a rich, smooth silk-like
-                    finish with long-lasting weather protection and luxurious
-                    appeal.
+                    Premium interior paint offering a smooth matte finish, rich color, superior washability, and a soft, elegant look for walls.
                   </dd>
                 </div>
                 <div className="relative pl-9">
@@ -68,12 +102,10 @@ const ProductHighlight: React.FC = () => {
                     >
                       <path d="M4 4a1 1 0 0 1 1-1h6v2H6v3h7a1 1 0 0 1 1 1v2H6v3h6v2H5a1 1 0 0 1-1-1V4Zm13.414 7-1.707 1.707a1 1 0 0 0 0 1.414L17 15.414V21a1 1 0 0 0 2 0v-5.586l1.293 1.293a1 1 0 1 0 1.414-1.414l-3-3a1 1 0 0 0-1.414 0Z" />
                     </svg>
-                    Interior-Exterior Emulsion—
+                    Creation Exterior Emulsion—
                   </dt>
                   <dd className="inline">
-                    Versatile emulsion suitable for both interiors and
-                    exteriors, offering excellent coverage, smooth finish, and
-                    resistance to moisture and weather.
+                    Weatherproof exterior emulsion providing UV resistance, long-lasting colors, and protection against algae, dirt, and harsh environmental conditions.
                   </dd>
                 </div>
                 <div className="relative pl-9">
@@ -87,12 +119,10 @@ const ProductHighlight: React.FC = () => {
                     >
                       <path d="M4 4a1 1 0 0 1 1-1h6v2H6v3h7a1 1 0 0 1 1 1v2H6v3h6v2H5a1 1 0 0 1-1-1V4Zm13.414 7-1.707 1.707a1 1 0 0 0 0 1.414L17 15.414V21a1 1 0 0 0 2 0v-5.586l1.293 1.293a1 1 0 1 0 1.414-1.414l-3-3a1 1 0 0 0-1.414 0Z" />
                     </svg>
-                    Interior-Exterior Primer—
+                    Creation Interior Emulsion—
                   </dt>
                   <dd className="inline">
-                    A high-performance primer that enhances paint adhesion,
-                    seals porous surfaces, and ensures long-lasting results on
-                    interior and exterior walls.
+                    Smooth, washable interior emulsion delivering excellent coverage, low odor, and lasting beauty to enhance any room’s appearance.
                   </dd>
                 </div>
                 <div className="relative pl-9">
@@ -106,12 +136,10 @@ const ProductHighlight: React.FC = () => {
                     >
                       <path d="M4 4a1 1 0 0 1 1-1h6v2H6v3h7a1 1 0 0 1 1 1v2H6v3h6v2H5a1 1 0 0 1-1-1V4Zm13.414 7-1.707 1.707a1 1 0 0 0 0 1.414L17 15.414V21a1 1 0 0 0 2 0v-5.586l1.293 1.293a1 1 0 1 0 1.414-1.414l-3-3a1 1 0 0 0-1.414 0Z" />
                     </svg>
-                    Wall-Furniture Putty—
+                    Creation Wooden & Wall-Furniture Acrylic Putty—
                   </dt>
                   <dd className="inline">
-                    Multipurpose putty designed for both walls and furniture —
-                    providing a smooth, crack-free base by filling minor
-                    imperfections and pores.
+                    Acrylic putty for walls and wood surfaces, ensuring smoothness, strong adhesion, easy sanding, and a perfect painting base.
                   </dd>
                 </div>
                 <div className="relative pl-9">
@@ -125,7 +153,7 @@ const ProductHighlight: React.FC = () => {
                     >
                       <path d="M4 4a1 1 0 0 1 1-1h6v2H6v3h7a1 1 0 0 1 1 1v2H6v3h6v2H5a1 1 0 0 1-1-1V4Zm13.414 7-1.707 1.707a1 1 0 0 0 0 1.414L17 15.414V21a1 1 0 0 0 2 0v-5.586l1.293 1.293a1 1 0 1 0 1.414-1.414l-3-3a1 1 0 0 0-1.414 0Z" />
                     </svg>
-                    Hi-Power Pigment Paster—
+                    Creation Hi-Power Pigment Paster—
                   </dt>
                   <dd className="inline">
                     High-strength pigment paste used for tinting paints,
@@ -144,24 +172,37 @@ const ProductHighlight: React.FC = () => {
                     >
                       <path d="M4 4a1 1 0 0 1 1-1h6v2H6v3h7a1 1 0 0 1 1 1v2H6v3h6v2H5a1 1 0 0 1-1-1V4Zm13.414 7-1.707 1.707a1 1 0 0 0 0 1.414L17 15.414V21a1 1 0 0 0 2 0v-5.586l1.293 1.293a1 1 0 1 0 1.414-1.414l-3-3a1 1 0 0 0-1.414 0Z" />
                     </svg>
-                    Acrylic/Synthetic Distemper:—
+                    Creation Acrylic Distemper:—
                   </dt>
                   <dd className="inline">
-                    Economical and easy-to-apply wall finish, ideal for interior
-                    walls — providing a smooth matte finish with good
-                    washability and coverage.
+                    Budget-friendly interior paint with a smooth matte finish, enhanced adhesion, and vibrant colors for a fresh, lasting wall appearance.
                   </dd>
                 </div>
               </dl>
             </div>
           </div>
           <img
-            src={bucketImage}
-            alt="Product screenshot"
+             src={images[currentIndex]}
+              alt={`Slide ${currentIndex + 1}`}
             className="w-3xl w-fit max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 hover:scale-105 transition-all duration-500"
             width="2432"
             height="1442"
           />
+           
+            <div className="absolute top-4 right-1 flex space-x-2">
+              <button
+                onClick={prevSlide}
+                className="bg-white/70 p-2 rounded-full hover:bg-white shadow transition"
+              >
+                <ChevronLeftIcon className="w-5 h-5 text-gray-800" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="bg-white/70 p-2 rounded-full hover:bg-white shadow transition"
+              >
+                <ChevronRightIcon className="w-5 h-5 text-gray-800" />
+              </button>
+            </div>
         </div>
       </div>
     </div>

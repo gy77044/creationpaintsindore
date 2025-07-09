@@ -28,28 +28,28 @@ Whether you're designing a cozy home, a modern office, or a bold commercial spac
 CreationPaints — Color Beyond Imagination.</p>
     </div>
     <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-      <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+      {/* <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
         <a href="#">Open roles <span aria-hidden="true">&rarr;</span></a>
         <a href="#">Programs <span aria-hidden="true">&rarr;</span></a>
         <a href="#">Our values <span aria-hidden="true">&rarr;</span></a>
         <a href="#">Meet our leadership <span aria-hidden="true">&rarr;</span></a>
-      </div>
+      </div> */}
       <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col-reverse gap-1">
           <dt className="text-base/7 text-gray-300">Years of Expertise</dt>
-          <dd className="text-4xl font-semibold tracking-tight text-white">10+</dd>
+          <dd className="text-4xl font-semibold tracking-tight text-white">1+</dd>
         </div>
         <div className="flex flex-col-reverse gap-1">
           <dt className="text-base/7 text-gray-300">Team Members</dt>
-          <dd className="text-4xl font-semibold tracking-tight text-white">10+</dd>
+          <dd className="text-4xl font-semibold tracking-tight text-white">20+</dd>
         </div>
         <div className="flex flex-col-reverse gap-1">
           <dt className="text-base/7 text-gray-300">Cities Served</dt>
-          <dd className="text-4xl font-semibold tracking-tight text-white">50+</dd>
+          <dd className="text-4xl font-semibold tracking-tight text-white">200+</dd>
         </div>
         <div className="flex flex-col-reverse gap-1">
           <dt className="text-base/7 text-gray-300">Products Delivered</dt>
-          <dd className="text-4xl font-semibold tracking-tight text-white">Unlimited</dd>
+          <dd className="text-4xl font-semibold tracking-tight text-white">Loading..</dd>
         </div>
       </dl>
     </div>
