@@ -5,7 +5,7 @@ import Footer from '../Footer';
 import Header from './Header';
 
 // Define the URLs for the images
-const NETWORK_HERO_BG: string = '../../../public/assests/network.jpg';
+const NETWORK_HERO_BG: string = 'https://www.creativepaints.in/themes/images/network.jpg';
 // REPLACE THIS WITH THE ACTUAL URL OF THE LIGHT GRAY/WHITE INDIA MAP OUTLINE
 const INDIA_MAP_BG: string = 'https://www.creativepaints.in/themes/images/map.png'; //
 

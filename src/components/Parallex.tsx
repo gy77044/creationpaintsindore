@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import blueimage from "../../public/assests/blueimage.png"
 const ParallaxSection: React.FC<{ image: string; text: string,text1: string }> = ({ image, text,text1 }) => (
   <div
     className="relative h-screen flex flex-col items-center justify-center bg-fixed bg-center bg-no-repeat bg-cover text-white rounded-sm"
-    style={{ backgroundImage: `url(../../public/assests/blueimage.png)` }}>
+    style={{ backgroundImage: `url(${blueimage})` }}>
     <div className="absolute inset-0  z-0 border-[1vh] border-white rounded-md animate-new-color-change" />
     <motion.div
       initial={{ opacity: 0, y: 40 }}
