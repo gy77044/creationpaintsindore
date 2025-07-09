@@ -10,13 +10,13 @@ import {
 
 const navLinks = [
   {
-    heading: "Products",
+    heading: "Pages",
     items: [
-      "Interior Product",
-      "Exterior Product",
-      "Enamels",
-      "Wood Finishes",
-      "Waterproofing",
+      "Product",
+      "Gallery",
+      "Shades",
+      "About Us",
+      "Company",
     ],
   },
   {
@@ -48,12 +48,11 @@ const Footer = () => {
             className="h-50 w-auto"
           />
           <div className="flex gap-4">
-            <FaFacebookF className={iconClass} />
-            <FaInstagram className={iconClass} />
-            <FaLinkedinIn className={iconClass} />
-            <FaPinterestP className={iconClass} />
-            <FaXTwitter className={iconClass} />
-            <FaYoutube className={iconClass} />
+            <a href="https://www.facebook.com/people/Creation-Paints/61575989485753/#"> <FaFacebookF className={iconClass} /> </a>
+            <a href="https://www.instagram.com/creation_paints/"><FaInstagram className={iconClass} /></a>
+           <a href="https://www.facebook.com/people/Creation-Paints/61575989485753/#"> <FaLinkedinIn className={iconClass} /></a>
+           <a href="https://www.facebook.com/people/Creation-Paints/61575989485753/#"> <FaPinterestP className={iconClass} /></a>
+            <a href="https://www.facebook.com/people/Creation-Paints/61575989485753/#"><FaXTwitter className={iconClass} /></a>
           </div>
         </div>
 

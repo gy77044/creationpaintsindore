@@ -153,7 +153,7 @@ const ProductHighlight: React.FC = () => {
                     >
                       <path d="M4 4a1 1 0 0 1 1-1h6v2H6v3h7a1 1 0 0 1 1 1v2H6v3h6v2H5a1 1 0 0 1-1-1V4Zm13.414 7-1.707 1.707a1 1 0 0 0 0 1.414L17 15.414V21a1 1 0 0 0 2 0v-5.586l1.293 1.293a1 1 0 1 0 1.414-1.414l-3-3a1 1 0 0 0-1.414 0Z" />
                     </svg>
-                    Creation Hi-Power Pigment Paster—
+                    Creation Hi-Power Pigment Paste—
                   </dt>
                   <dd className="inline">
                     High-strength pigment paste used for tinting paints,

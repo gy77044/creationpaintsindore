@@ -10,6 +10,7 @@ import greenbalti from '../../public/assests/greenbalti.png';
 import acrylicbalti from '../../public/assests/acrylicbalti.png';
 import PaintDetailSection from "../components/PaintDetailSection";
 import distemper from '../../public/assests/dd.jpg';
+import som from '../../public/assests/som.jpg';
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const blogCards = [
@@ -64,6 +65,13 @@ const blogCards = [
   },
   {
     id: 7,
+    title: "Creation Som Acrylic Distemper | 1 - 4 Kilogram Packet | Distemper | Multipurpose Use | Durable Base Coat | Ideal for Large-Scale Projects",
+    category: "Premium",
+    img: som,
+    description: "CreationPaints Acrylic Distemper Packet is Strong adhesion, fast-drying, and eco-safe formula for both interior and exterior surfaces.",
+  },
+  {
+    id: 8,
     title: "Eco Ext./Int. Primer | 50 Litre Drum | Heavy-Duty Primer | Multipurpose Use | Durable Base Coat | Ideal for Large-Scale Projects",
     category: "Premium",
     img: tank,

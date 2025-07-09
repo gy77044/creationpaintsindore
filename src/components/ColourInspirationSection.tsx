@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import watercolor from "../../public/assests/allimg/bg-watercolor.jpg";
-import mencreation from "../../public/assests/allimg/manwithcreation.png";
+import mencreation from "../../public/assests/house.png";
 import redwall from "../../public/assests/allimg/painting-red-wall.jpg";
 import rollon from "../../public/assests/allimg/rollon.jpg";
 import roughpaint from "../../public/assests/allimg/roughpaint.jpg";
 import bgtheme from "../../public/assests/bg-theme.png";
 import blueBrush from "../../public/assests/blue_brush.png";
 import whiteImg from "../../public/assests/whiteimag.png";
+import yelow from '../../public/assests/top-view-yellow-brush-stroke.jpg';
+import rollbrush4 from '../../public/assests/rollbrush4.jpg';
 // Provided images array
 const imageUrls = [
-  mencreation,roughpaint,whiteImg,bgtheme,rollon,redwall,watercolor
+  yelow,mencreation,roughpaint,whiteImg,bgtheme,rollon,redwall,watercolor,blueBrush,rollbrush4
 ];
 
 

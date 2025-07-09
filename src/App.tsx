@@ -6,6 +6,9 @@ import Outdoor from "./pages/Outdoor";
 import HomeScreen from "./components/HomeScreen";
 import ProductPage from "./pages/ProductPage";
 import ScrollToTop from "./components/ScrollRenderWrapper";
+import CompanyProfile from "./components/Header/CompanyProfile";
+import MissionVision from "./components/Header/MissionVision";
+import Network from "./components/Header/Network";
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
         />
         <Route path="/indoor" element={<Indoor />} />
         <Route path="/outdoor" element={<Outdoor />} />
+        <Route path="/about/company" element={<CompanyProfile />} />
+        <Route path="/about/vision" element={<MissionVision />} />
+        <Route path="/network" element={<Network />} />
         <Route path="/product" element={<ProductPage />} />
         {/* <Route path="/categories" element={<Categories />} /> */}
       </Routes>

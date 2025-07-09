@@ -7,13 +7,11 @@ import LightGreenRoom from "../../public/assests/LightGreenRoom.jpeg";
 import orangeRoom from "../../public/assests/OrangeRoom.jpeg";
 import redRoom from "../../public/assests/redRoom.jpeg";
 import skyRoom from "../../public/assests/skyblueRoom.jpeg";
-import Serene from "../../public/assests/allimg/Serene.jpeg";
 import Sereneblue from "../../public/assests/allimg/Sereneblue.jpeg";
 import bucketpaint from "../../public/assests/allimg/buckets-paint-floor.jpg";
 import greenWall from "../../public/assests/allimg/greenWall.jpeg";
 import purpleWall from "../../public/assests/allimg/purpleWall.jpeg";
 import Hero from "../components/StickSlider";
-import Slider from "react-slick";
 import RoomInspirationSection from "../components/RoomInspirationSection";
 import Products from "../components/Products";
 import ProductHighlightsSection from "../components/ProductHighlightsSection";
@@ -21,37 +19,25 @@ import PaintProductCards from "../components/Parallex";
 import InteractiveCard from "../components/InteractiveCard";
 import HeroSection from "../components/HeroSection";
 import ColourInspirationSection from "../components/ColourInspirationSection";
+
 const Indoor = () => {
   const imageData = [
-    {
-      title: "Luxury Interior",
-      src: greenWall,
-    },
-    {
-      title: "Smooth Interior",
-      src: purpleWall,
-    },
-    {
-      title: "Shine Interior",
-      src: Sereneblue,
-    },
+    { title: "Luxury Interior", src: greenWall },
+    { title: "Smooth Interior", src: purpleWall },
+    { title: "Shine Interior", src: Sereneblue },
   ];
 
   return (
     <>
       <Header />
-      <br />
-      <br />
-      <br />
-      <br />
-
+      <div className="mt-20 sm:mt-32" />
       <Hero imageData={imageData} />
+
       <PaintDetailSection
         id={0}
         paintImg={bucketpaint}
         PaintTitle="Decorative Paints - Transform Your Space with Creation Paints’ Decorative Finishes"
-        PaintDetail="Elevate your interiors with Creation Paints' exclusive range of decorative finishes. Designed to add depth, texture, and personality to any space, our paints go beyond color to create a luxurious ambiance tailored to your style. Whether you're aiming for a sleek modern look or a timeless classic feel, our high-quality formulations ensure stunning results with long-lasting beauty. Discover how Creation Paints can help you turn ordinary walls into artistic expressions.
-"
+        PaintDetail="Elevate your interiors with Creation Paints' exclusive range of decorative finishes. Designed to add depth, texture, and personality to any space, our paints go beyond color to create a luxurious ambiance tailored to your style. Whether you're aiming for a sleek modern look or a timeless classic feel, our high-quality formulations ensure stunning results with long-lasting beauty. Discover how Creation Paints can help you turn ordinary walls into artistic expressions."
       />
       <PaintDetailSection
         id={1}
@@ -83,6 +69,7 @@ const Indoor = () => {
         PaintTitle="Electri Blue Hue by Creation Paints"
         PaintDetail="Unleash the power of bold expression with the Electric Blue Hue by Creation Paints. This vivid, high-energy shade brings a modern, edgy vibe to any space—perfect for those who dare to be different. Its striking blue tone instantly grabs attention, making it ideal for feature walls, creative studios, or stylish interiors that demand a touch of drama. With smooth application and long-lasting brilliance, Electric Blue delivers both impact and elegance in every stroke."
       />
+
       <Footer />
     </>
   );
