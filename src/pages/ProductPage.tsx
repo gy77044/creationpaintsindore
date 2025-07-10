@@ -1,16 +1,16 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
-import blackbalti from '../../public/assests/blackbalti.png';
-import orangebalti from '../../public/assests/orangebalti.png';
-import pinkbalti from '../../public/assests/pinkbalti.png';
-import smallbalti from '../../public/assests/smallbalti.png';
-import tank from '../../public/assests/tank.png';
-import greenbalti from '../../public/assests/greenbalti.png';
-import acrylicbalti from '../../public/assests/acrylicbalti.png';
+import blackbalti from '../assests/blackbalti.png';
+import orangebalti from '../assests/orangebalti.png';
+import pinkbalti from '../assests/pinkbalti.png';
+import smallbalti from '../assests/smallbalti.png';
+import tank from '../assests/tank.png';
+import greenbalti from '../assests/greenbalti.png';
+import acrylicbalti from '../assests/acrylicbalti.png';
 import PaintDetailSection from "../components/PaintDetailSection";
-import distemper from '../../public/assests/dd.jpg';
-import som from '../../public/assests/som.jpg';
+import distemper from '../assests/dd.jpg';
+import som from '../assests/som.jpg';
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const blogCards = [
@@ -88,7 +88,7 @@ const ProductPage: React.FC = () => {
   };
   
   return (<>
-              <Header/>
+             
               <br/>
               <br/>
                <PaintDetailSection id={product?.[0].id}  paintImg={product?.[0].img} PaintTitle={product?.[0].title} PaintDetail={product?.[0].description}/>
@@ -114,7 +114,7 @@ const ProductPage: React.FC = () => {
         ))}
       </div>
     </div>
-    <Footer/>
+ 
   </>
   );
 };

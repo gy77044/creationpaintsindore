@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import image1 from "../../../public/assests/allimg/blueIndoor.jpeg";
-import image2 from "../../../public/assests/allimg/skyblueIndoor.jpeg";
-import image3 from "../../../public/assests/allimg/NaturalGreen.jpeg";
-import image4 from "../../../public/assests/allimg/yelloIndor.jpeg";
+import image1 from "../../assests/allimg/blueIndoor.jpeg";
+import image2 from "../../assests/allimg/skyblueIndoor.jpeg";
+import image3 from "../../assests/allimg/NaturalGreen.jpeg";
+import image4 from "../../assests/allimg/yelloIndor.jpeg";
 const images = [image1, image2, image3, image4];
 const ProductHighlight: React.FC = () => {
    const [currentIndex, setCurrentIndex] = useState(0);

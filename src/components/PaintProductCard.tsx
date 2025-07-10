@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import blackbalti from '../../public/assests/blackbalti.png';
-import orangebalti from '../../public/assests/orangebalti.png';
-import pinkbalti from '../../public/assests/pinkbalti.png';
-import smallbalti from '../../public/assests/smallbalti.png';
-import tank from '../../public/assests/tank.png';
-import greenbalti from '../../public/assests/greenbalti.png';
-import acrylicbalti from '../../public/assests/acrylicbalti.png';
-import distemper from '../../public/assests/dd.jpg';
-import som from '../../public/assests/som.jpg';
+import blackbalti from '../assests/blackbalti.png';
+import orangebalti from '../assests/orangebalti.png';
+import pinkbalti from '../assests/pinkbalti.png';
+import smallbalti from '../assests/smallbalti.png';
+import tank from '../assests/tank.png';
+import greenbalti from '../assests/greenbalti.png';
+import acrylicbalti from '../assests/acrylicbalti.png';
+import distemper from '../assests/dd.jpg';
+import som from '../assests/som.jpg';
 
 const products = [
   {

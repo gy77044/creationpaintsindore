@@ -4,18 +4,18 @@ import React from 'react';
     import 'slick-carousel/slick/slick.css';
     import 'slick-carousel/slick/slick-theme.css';
     import Slider, { Settings } from 'react-slick';
-  import BlueRoom from "../../../public/assests/BlueRoom.jpeg"
-import GreenRoom from "../../../public/assests/GreenRoom.jpeg"
-import LightGreenRoom from "../../../public/assests/LightGreenRoom.jpeg"
-import OrangeRoom from "../../../public/assests/OrangeRoom.jpeg"
-import redRoom from "../../../public/assests/redRoom.jpeg"
-import skyblueRoom from "../../../public/assests/skyblueRoom.jpeg"
-import WhiteRoom from "../../../public/assests/WhiteRoom.jpeg"
-import pinkbalti from "../../../public/assests/pinkbalti.jpeg"
-import acrylicbalti from "../../../public/assests/acrylicbalti.jpeg"
-import blackbalti2 from "../../../public/assests/blackbalti2.jpeg"
-import bluebalti from "../../../public/assests/bluebalti.jpeg"
-import greenbalti from "../../../public/assests/greenbalti.jpeg"
+  import BlueRoom from "../assests/BlueRoom.jpeg"
+import GreenRoom from "../assests/GreenRoom.jpeg"
+import LightGreenRoom from "../assests/LightGreenRoom.jpeg"
+import OrangeRoom from "../assests/OrangeRoom.jpeg"
+import redRoom from "../assests/redRoom.jpeg"
+import skyblueRoom from "../assests/skyblueRoom.jpeg"
+import WhiteRoom from "../assests/WhiteRoom.jpeg"
+import pinkbalti from "../assests/pinkbalti.jpeg"
+import acrylicbalti from "../assests/acrylicbalti.jpeg"
+import blackbalti2 from "../assests/blackbalti2.jpeg"
+import bluebalti from "../assests/bluebalti.jpeg"
+import greenbalti from "../assests/greenbalti.jpeg"
 import './slider.scss';
 
 const ImgSlider: React.FC = () => {

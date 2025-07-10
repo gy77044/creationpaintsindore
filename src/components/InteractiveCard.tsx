@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import bgcard from "../../public/assests/bgimg.jpg";
-import Image1 from "../../public/assests/bgimg.jpg";
-import Image2 from "../../public/assests/bgimg.jpg";
-import Image3 from "../../public/assests/bgimg.jpg";
-import Image4 from "../../public/assests/bgimg.jpg";
-import Image5 from "../../public/assests/bgimg.jpg";
-import Image6 from "../../public/assests/bgimg.jpg";
+import bgcard from "../assests/bgimg.jpg";
+import Image1 from "../assests/bgimg.jpg";
+import Image2 from "../assests/bgimg.jpg";
+import Image3 from "../assests/bgimg.jpg";
+import Image4 from "../assests/bgimg.jpg";
+import Image5 from "../assests/bgimg.jpg";
+import Image6 from "../assests/bgimg.jpg";
 
 const markers = [
   { position: { left: 'left-6 sm:left-20 md:left-28', top: 'top-20 md:top-28' }, label: 'Metallic Emulsion', image: Image4 },

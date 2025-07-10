@@ -17,11 +17,11 @@ const NETWORK_LOCATIONS: string[] = [
 ];
 
 const Network: React.FC = () => {
-  return (<><Header/>
+  return (<>
     <section id="network">
       {/* Hero Banner for OUR NETWORK */}
       <div
-        className="relative py-20 md:py-32 bg-cover bg-center text-white flex items-end justify-center"
+        className="relative mt-20 py-20 md:py-32 bg-cover bg-center text-white flex items-end justify-center"
         style={{ backgroundImage: `url(${NETWORK_HERO_BG})` }}
       >
         {/* Overlay for background opacity */}
@@ -68,7 +68,7 @@ const Network: React.FC = () => {
       </div>
     </section>
     <MapLocation/>
-    <Footer/>
+ 
     </>
   );
 };

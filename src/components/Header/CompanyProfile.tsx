@@ -58,7 +58,6 @@ const NumberCounter: React.FC<NumberCounterProps> = ({ endValue, duration = 1000
 
 const CompanyProfile: React.FC = () => {
   return (<>
-<Header/>
     <section id="about">
       {/* Breadcrumb Area - Updated for About Us */}
       <div
@@ -148,7 +147,7 @@ const CompanyProfile: React.FC = () => {
         </div>
       </div>
     </section>
-    <Footer/></>
+  </>
   );
 };
 

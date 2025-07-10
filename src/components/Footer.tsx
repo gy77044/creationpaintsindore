@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assests/logo.png"
 import {
   FaFacebookF,
   FaInstagram,
@@ -43,7 +44,7 @@ const Footer = () => {
         {/* Logo and Social Icons */}
         <div className="space-y-4 col-span-1">
           <img
-            src="../../public/assests/logo.png"
+            src={logo}
             alt="Creation Paints Logo"
             className="h-50 w-auto"
           />

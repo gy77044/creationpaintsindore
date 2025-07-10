@@ -58,7 +58,6 @@ const NumberCounter: React.FC<NumberCounterProps> = ({ endValue, duration = 1000
 
 const MissionVision: React.FC = () => {
   return (<>
-  <Header/>
     <section id="mission-vision">
 
       {/* Hero Banner for Mission & Vision */}
@@ -116,7 +115,7 @@ const MissionVision: React.FC = () => {
         </div>
       </div>
     </section>
-    <Footer/></>
+</>
   );
 };
 

@@ -1,62 +1,79 @@
 import React, { useState } from 'react';
-import img from "../../../public/assests/blackbalti.png";
-import { useNavigate } from 'react-router-dom';
+import img from "../assests/blackbalti.png";
+import { Link } from 'react-router-dom';
 
-const navLinks = [
-  { href: '#product', label: 'Product' },
-  { href: '#gallery', label: 'Gallery' },
-  { href: '#shade', label: 'Shades' },
-  { href: '#about', label: 'About Us' },
-  { href: '#network', label: 'Network' },
-  { href: '#dealers', label: 'Dealership' },
+// Define a type for your navigation links, including an optional dropdown
+interface NavLink {
+  href: string;
+  label: string;
+  dropdown?: { name: string; link: string }[]; // Optional array of dropdown items
+}
+
+const navLinks: NavLink[] = [
+  { href: '/', label: 'Home', dropdown: [
+      { name: 'Default', link: '/' },
+      
+    ], },
+ 
+  { href: '/shade', label: 'Shades', dropdown: [
+      { name: 'Default', link: '/' },      
+    ] },
+  {
+    href: '/#about',
+    label: 'About Us', 
+    dropdown: [
+      { name: 'Company Profile', link: '/about-us/company-profile' },
+      { name: 'Mission & Vision', link: '/about-us/mission-vision' },
+      // { name: 'Director Message', link: '/about-us/director-message' },
+      // { name: 'RnD', link: '/about-us/rnd' },
+      // { name: 'FAQ\'s', link: '/about-us/faqs' },
+    ],
+  },
+   { href: '/gallery', label: 'Gallery',dropdown: [
+      { name: 'Default', link: '/' },
+      
+    ] },
+  { href: '/network', label: 'Network' },
+  { href: '/dealership', label: 'Dealership' },
+  { href: '/contact', label: 'Inquiry' },
 ];
 
-const sliderImagesByLabel: Record<string, string[]> = {
-  Product: [img, img, img, img, img, img],
-  Gallery: [img, img, img],
-  Shades: [img, img, img],
-  'About Us': [img, img, img],
-  Company: [img, img, img],
-};
-
 const Header: React.FC = () => {
-  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [sliderIndex, setSliderIndex] = useState(0);
-  const [aboutMobileOpen, setAboutMobileOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null);
 
   const handleMouseEnter = (label: string) => {
-    setHoveredLink(label);
-    setSliderIndex(0);
+    setActiveDropdown(label);
   };
 
-  const showNext = () => {
-    if (hoveredLink) {
-      const total = sliderImagesByLabel[hoveredLink]?.length || 0;
-      setSliderIndex((prev) => (prev + 1) % total);
-    }
+  const handleMouseLeave = () => {
+    setActiveDropdown(null);
   };
 
-  const showPrev = () => {
-    if (hoveredLink) {
-      const total = sliderImagesByLabel[hoveredLink]?.length || 0;
-      setSliderIndex((prev) => (prev - 1 + total) % total);
-    }
+  const toggleMobileDropdown = (label: string) => {
+    setMobileDropdownOpen(mobileDropdownOpen === label ? null : label);
+  };
+
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+    setMobileDropdownOpen(null);
+    setActiveDropdown(null);
   };
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 bg-gray-900">
+    <header className="absolute inset-x-0 top-0 z-50 bg-gray-900 ">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <Link to="/" className="-m-1.5 p-1.5">
             <span className="font-semibold text-xl text-[#ffae2b] animate-color-change">CreationPaints</span>
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
         <div className="flex lg:hidden">
           <button
-            onClick={() => setIsMenuOpen(true)}
+            onClick={() => setIsMobileMenuOpen(true)}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -67,62 +84,81 @@ const Header: React.FC = () => {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex lg:gap-x-12 relative">
-          {navLinks.map((link) => {
-            const isAbout = link.label === 'About Us';
-            return (
-              <div key={link.label} className="relative group">
-                <a
-                  href={`/${link.href}`}
+          {navLinks.map((link) => (
+            <div
+              key={link.label}
+              className="relative"
+              // Only apply hover handlers if it's the "About Us" link with a dropdown
+              onMouseEnter={() => link.label === 'About Us' && link.dropdown && handleMouseEnter(link.label)}
+              onMouseLeave={() => link.label === 'About Us' && link.dropdown ? handleMouseLeave() : undefined}
+            >
+              {link.dropdown && link.label === 'About Us' ? (
+                <>
+                  <button
+                    className={` " text-white text-sm font-semibold mt-[3px] hover:text-[#ffae2b]  flex items-center"`}
+                  >
+                    {link.label}
+                    <svg
+                      className={`ml-1 w-4 h-4 transition-transform ${
+                        activeDropdown === link.label ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
+                  {/* Dropdown Menu */}
+                  <ul className={`
+                      absolute top-full left-0 bg-white shadow-xl py-2 min-w-[180px] z-20 overflow-hidden
+                      transition-all duration-200 ease-in-out
+                      ${activeDropdown === link.label ? 'opacity-100 pointer-events-auto pt-1 pb-1' : 'opacity-0 pointer-events-none'}
+                  `}>
+                    {link.dropdown.map((dropdownItem) => (
+                      <li key={dropdownItem.name}>
+                        <Link
+                          to={dropdownItem.link}
+                          className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#ffae2b] transition-colors duration-200 text-sm"
+                          onClick={handleLinkClick}
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <Link
+                  to={link.href}
                   className="text-sm font-semibold text-white hover:text-[#ffae2b] hover:scale-110 transition-all duration-200"
+                  onClick={handleLinkClick}
                 >
                   {link.label}
-                </a>
-
-                {/* Dropdown for About Us - Desktop */}
-                {isAbout && (
-                  <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg z-50 min-w-[180px]">
-                    <ul className="flex flex-col py-2">
-                      <li>
-                        <a
-                          href="/about/company"
-                          className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 hover:text-[#ffae2b]"
-                        >
-                          Company Info
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/about/vision"
-                          className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 hover:text-[#ffae2b]"
-                        >
-                          Vision & Mission
-                        </a>
-                      </li>                   
-                    </ul>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                </Link>
+              )}
+            </div>
+          ))}
         </div>
 
-        {/* Desktop Contact */}
+        {/* Desktop Contact - Kept as a separate item for consistent right-side placement */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/#contact" className="text-sm font-semibold text-white hover:text-[#ffae2b] hover:scale-110 transition-all duration-200">
-            Contact Us <span aria-hidden="true">&rarr;</span>
-          </a>
+          <Link to="/contact" className="text-sm font-semibold text-white hover:text-[#ffae2b] hover:scale-110 transition-all duration-1000  animate-color-change">
+            Order Now <span aria-hidden="true">&rarr;</span>
+          </Link>
         </div>
       </nav>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
+      {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-50 bg-white overflow-y-auto p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5">
+            <Link to="/" className="-m-1.5 p-1.5" onClick={handleLinkClick}>
               <span className="font-semibold text-[#ffae2b] animate-color-change">CreationPaints</span>
-            </a>
+            </Link>
             <button
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => setIsMobileMenuOpen(false)}
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -134,47 +170,63 @@ const Header: React.FC = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navLinks.map((link) => {
-                  const isAbout = link.label === 'About Us';
-                  return (
-                    <div key={link.label}>
-                      {isAbout ? (
-                        <>
-                          <button
-                            onClick={() => setAboutMobileOpen(!aboutMobileOpen)}
-                            className="w-full text-left rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 hover:text-[#ffae2b] flex justify-between items-center"
-                          >
-                            About Us
-                            <span>{aboutMobileOpen ? '▲' : '▼'}</span>
-                          </button>
-                          {aboutMobileOpen && (
-                            <div className="ml-4">
-                              <a href="/about/company" className="block px-3 py-1 text-sm text-gray-700 hover:text-[#ffae2b]">Company Info</a>
-                              <a href="/about/vision" className="block px-3 py-1 text-sm text-gray-700 hover:text-[#ffae2b]">Vision & Mission</a>
-                            </div>
-                          )}
-                        </>
-                      ) : (
-                        <a
-                          href={link.href}
-                          onClick={() => setIsMenuOpen(false)}
-                          className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 hover:text-[#ffae2b] hover:scale-105 transition-all duration-200"
+                {navLinks.map((link) => (
+                  <div key={link.label}>
+                    {link.dropdown && link.label === 'ABOUT US' ? (
+                      <>
+                        <button
+                          onClick={() => toggleMobileDropdown(link.label)}
+                          className="flex items-center justify-between w-full rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 hover:text-[#ffae2b] hover:scale-105 transition-all duration-200"
                         >
                           {link.label}
-                        </a>
-                      )}
-                    </div>
-                  );
-                })}
+                          <svg
+                            className={`ml-1 w-5 h-5 transition-transform ${
+                              mobileDropdownOpen === link.label ? 'rotate-180' : ''
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                          </svg>
+                        </button>
+                        {mobileDropdownOpen === link.label && (
+                          <ul className="pl-6 mt-2 space-y-1 bg-gray-50 py-2">
+                            {link.dropdown.map((dropdownItem) => (
+                              <li key={dropdownItem.name}>
+                                <Link
+                                  to={dropdownItem.link}
+                                  onClick={handleLinkClick}
+                                  className="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#ffae2b] transition-colors duration-200"
+                                >
+                                  {dropdownItem.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </>
+                    ) : (
+                      <Link
+                        to={link.href}
+                        onClick={handleLinkClick}
+                        className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 hover:text-[#ffae2b] hover:scale-105 transition-all duration-200"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
+                  </div>
+                ))}
               </div>
               <div className="py-6">
-                <a
-                  href="#contactUs"
-                  onClick={() => setIsMenuOpen(false)}
+                <Link
+                  to="/#contact" // Assuming /#contact is your general contact page
+                  onClick={handleLinkClick}
                   className="block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50 hover:text-[#ffae2b] hover:scale-105 transition-all duration-200"
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
           </div>

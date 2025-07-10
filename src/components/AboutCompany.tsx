@@ -1,5 +1,4 @@
-import React from 'react'
-import assosrt from "../../public/assests/allimg/assortment.jpg"
+import assosrt from "../assests/allimg/assortment.jpg"
 const AboutCompany = () => {
   return (
     <>

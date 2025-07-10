@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { FaUser, FaComment, FaPhone, FaEnvelope } from 'react-icons/fa'; // Importing icons from react-icons/fa
+import Header from './Header';
+import Footer from '../Footer';
 
 // Define the URL for the hero background image
 const DEALERSHIP_HERO_BG: string = 'https://www.creativepaints.in/themes/images/dealership.jpg'; // This image seems to match the background of the "BECOME A DEALER" banner
@@ -81,11 +83,11 @@ const Dealership: React.FC = () => {
     </div>
   );
 
-  return (
+  return (<>
     <section id="dealership">
       {/* Hero Banner for BECOME A DEALER */}
       <div
-        className="relative py-20 md:py-32 bg-cover bg-center text-white flex items-end justify-center"
+        className="relative py-20 md:py-32 bg-cover bg-center text-white flex items-end justify-center mt-20"
         style={{ backgroundImage: `url(${DEALERSHIP_HERO_BG})` }}
       >
         {/* Overlay for background opacity */}
@@ -295,7 +297,7 @@ const Dealership: React.FC = () => {
           </form>
         </div>
       </div>
-    </section>
+    </section></>
   );
 };
 

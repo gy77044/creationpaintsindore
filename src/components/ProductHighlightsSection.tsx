@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import acrylic from "../../public/assests/blackbalti.png"
+import acrylic from "../assests/blackbalti.png"
 import "./mainscreen.scss"
 const products = [
   {
