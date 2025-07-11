@@ -1,34 +1,24 @@
 import React, { useState } from 'react';
-import img from "../assests/blackbalti.png";
 import { Link } from 'react-router-dom';
 
-// Define a type for your navigation links, including an optional dropdown
 interface NavLink {
   href: string;
   label: string;
-  dropdown?: { name: string; link: string }[]; // Optional array of dropdown items
+  dropdown?: { name: string; link: string }[];
 }
 
 const navLinks: NavLink[] = [
-  { href: '/', label: 'Home', dropdown: [
-      { name: 'Default', link: '/' },
-      
-    ], },
+  { href: '/', label: 'Home', dropdown: [{ name: 'Default', link: '/' }] },
+  { href: '/shade', label: 'Shades', dropdown: [{ name: 'Default', link: '/' }] },
   {
     href: '/#about',
-    label: 'About Us', 
+    label: 'About Us',
     dropdown: [
       { name: 'Company Profile', link: '/about-us/company-profile' },
       { name: 'Mission & Vision', link: '/about-us/mission-vision' },
-      // { name: 'Director Message', link: '/about-us/director-message' },
-      // { name: 'RnD', link: '/about-us/rnd' },
-      // { name: 'FAQ\'s', link: '/about-us/faqs' },
     ],
   },
-   { href: '/gallery', label: 'Gallery',dropdown: [
-      { name: 'Default', link: '/' },
-      
-    ] },
+  { href: '/gallery', label: 'Gallery', dropdown: [{ name: 'Default', link: '/' }] },
   { href: '/network', label: 'Network' },
   { href: '/dealership', label: 'Dealership' },
   { href: '/contact', label: 'Inquiry' },
@@ -58,11 +48,13 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 bg-gray-900 ">
+    <header className="absolute inset-x-0 top-0 z-50 bg-gray-900">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
-            <span className="font-semibold text-xl text-[#ffae2b] animate-color-change">CreationPaints</span>
+            <span className="font-semibold text-xl text-[#ffae2b] animate-color-change">
+              CreationPaints
+            </span>
           </Link>
         </div>
 
@@ -84,15 +76,12 @@ const Header: React.FC = () => {
             <div
               key={link.label}
               className="relative"
-              // Only apply hover handlers if it's the "About Us" link with a dropdown
               onMouseEnter={() => link.label === 'About Us' && link.dropdown && handleMouseEnter(link.label)}
-              onMouseLeave={() => link.label === 'About Us' && link.dropdown ? handleMouseLeave() : undefined}
+              onMouseLeave={() => link.label === 'About Us' && link.dropdown && handleMouseLeave()}
             >
               {link.dropdown && link.label === 'About Us' ? (
                 <>
-                  <button
-                    className={` " text-white text-sm font-semibold mt-[3px] hover:text-[#ffae2b]  flex items-center"`}
-                  >
+                  <button className="text-white text-sm font-semibold mt-[3px] hover:text-[#ffae2b] flex items-center">
                     {link.label}
                     <svg
                       className={`ml-1 w-4 h-4 transition-transform ${
@@ -106,12 +95,13 @@ const Header: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                   </button>
-                  {/* Dropdown Menu */}
-                  <ul className={`
-                      absolute top-full left-0 bg-white shadow-xl py-2 min-w-[180px] z-20 overflow-hidden
-                      transition-all duration-200 ease-in-out
-                      ${activeDropdown === link.label ? 'opacity-100 pointer-events-auto pt-1 pb-1' : 'opacity-0 pointer-events-none'}
-                  `}>
+                  <ul
+                    className={`absolute top-full left-0 bg-white shadow-xl py-2 min-w-[180px] z-20 overflow-hidden transition-all duration-200 ease-in-out ${
+                      activeDropdown === link.label
+                        ? 'opacity-100 pointer-events-auto pt-1 pb-1'
+                        : 'opacity-0 pointer-events-none'
+                    }`}
+                  >
                     {link.dropdown.map((dropdownItem) => (
                       <li key={dropdownItem.name}>
                         <Link
@@ -138,9 +128,12 @@ const Header: React.FC = () => {
           ))}
         </div>
 
-        {/* Desktop Contact - Kept as a separate item for consistent right-side placement */}
+        {/* Desktop CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link to="/contact" className="text-sm font-semibold text-white hover:text-[#ffae2b] hover:scale-110 transition-all duration-1000  animate-color-change">
+          <Link
+            to="/contact"
+            className="text-sm font-semibold text-white hover:text-[#ffae2b] hover:scale-110 transition-all duration-1000 animate-color-change"
+          >
             Order Now <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
@@ -153,10 +146,7 @@ const Header: React.FC = () => {
             <Link to="/" className="-m-1.5 p-1.5" onClick={handleLinkClick}>
               <span className="font-semibold text-[#ffae2b] animate-color-change">CreationPaints</span>
             </Link>
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-            >
+            <button onClick={() => setIsMobileMenuOpen(false)} className="-m-2.5 rounded-md p-2.5 text-gray-700">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -168,7 +158,7 @@ const Header: React.FC = () => {
               <div className="space-y-2 py-6">
                 {navLinks.map((link) => (
                   <div key={link.label}>
-                    {link.dropdown && link.label === 'ABOUT US' ? (
+                    {link.dropdown && link.label === 'About Us' ? (
                       <>
                         <button
                           onClick={() => toggleMobileDropdown(link.label)}
@@ -217,7 +207,7 @@ const Header: React.FC = () => {
               </div>
               <div className="py-6">
                 <Link
-                  to="/#contact" // Assuming /#contact is your general contact page
+                  to="/contact"
                   onClick={handleLinkClick}
                   className="block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50 hover:text-[#ffae2b] hover:scale-105 transition-all duration-200"
                 >
