@@ -158,7 +158,7 @@ const Banner: React.FC = () => {
 
             {/* Right: Image Grid */}
             <div className="w-full lg:w-1/2 flex justify-center">
-              <div className="flex space-x-4">
+              <button className="flex space-x-4" onClick={handleCLick}>
                 <div className="grid grid-cols-1 gap-4">
                   <img
                     src={secondWall}
@@ -200,7 +200,7 @@ const Banner: React.FC = () => {
                     className="h-40 w-28 sm:h-64 sm:w-44 rounded-lg object-cover hover:scale-110 transition"
                   />
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>
