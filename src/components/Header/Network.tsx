@@ -1,19 +1,14 @@
 import React from 'react';
 import { FaMapMarkerAlt } from 'react-icons/fa'; // Import the map pin icon from react-icons/fa
 import MapLocation from '../MapLocation';
-import Footer from '../Footer';
-import Header from './Header';
-
+import NETWORK_HERO_BG from "../../assests/network.jpg"
 // Define the URLs for the images
-const NETWORK_HERO_BG: string = 'https://www.creativepaints.in/themes/images/network.jpg';
+// const NETWORK_HERO_BG: string = 'https://www.creativepaints.in/themes/images/network.jpg';
 // REPLACE THIS WITH THE ACTUAL URL OF THE LIGHT GRAY/WHITE INDIA MAP OUTLINE
 const INDIA_MAP_BG: string = 'https://www.creativepaints.in/themes/images/map.png'; //
 
 const NETWORK_LOCATIONS: string[] = [
-  'Madhya Pradesh', 'Rajasthan', 'Gujarat', 'Maharashtra',
-  'Goa', 'Karnataka', 'Hyderabad', 'Chattisgarh',
-  'Orissa', 'Uttar Pradesh', 'Meghalaya', 'Assam',
-  'Arunachal Pradesh', 'Manipur', 'Mizoram', 'Tripura',
+  'Madhya Pradesh', 'Rajasthan', 'Gujarat', 'Maharashtra','Chattisgarh','Uttar Pradesh',
 ];
 
 const Network: React.FC = () => {
@@ -54,7 +49,7 @@ const Network: React.FC = () => {
       >
         {/* Actual content overlaying the faded map */}
         <div className="relative z-10 container mx-auto px-4 text-gray-700">
-          <h2 className="text-2xl font-bold text-[#17a2b8] mb-8 text-center md:text-left">Depart & Distributors</h2>
+          <h2 className="text-2xl font-bold text-[#17a2b8] mb-8 text-center md:text-left">Depot & Distributors</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
             {NETWORK_LOCATIONS.map((location, index) => (

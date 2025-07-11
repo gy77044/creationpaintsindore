@@ -14,10 +14,6 @@ const navLinks: NavLink[] = [
       { name: 'Default', link: '/' },
       
     ], },
- 
-  { href: '/shade', label: 'Shades', dropdown: [
-      { name: 'Default', link: '/' },      
-    ] },
   {
     href: '/#about',
     label: 'About Us', 

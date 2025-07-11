@@ -8,7 +8,6 @@ import tank from '../assests/tank.png';
 import greenbalti from '../assests/greenbalti.png';
 import acrylicbalti from '../assests/acrylicbalti.png';
 import distemper from '../assests/dd.jpg';
-import som from '../assests/som.jpg';
 
 const products = [
   {
@@ -48,27 +47,20 @@ const products = [
   },
   {
     id: 5,
-    title: 'CREATION Acrylic Distemper | Smooth Matte Finish | Affordable Wall Paint | Easy Application | Quick Dry | Ideal for Interiors',
+    title: 'CREATION Acrylic Distemper | Smooth Matt Finish | Affordable Prices | Easy Application | Quick Dry | Ideal for Interiors',
     subtitle: 'CreationPaints Acrylic Distemper delivers a smooth, matte finish at an economical price...',
     features: ['Ultra-smooth luxury finish', 'Long-lasting and durable formula', 'Ideal for interior walls', 'Easy-to-clean surface'],
     image: orangebalti,
   },
   {
     id: 6,
-    title: 'Creation Acrylic Distemper | 1 - 4 Kilogram Packet | Distemper | Multipurpose Use | Durable Base Coat | Ideal for Large-Scale Projects',
+    title: 'Creation Acrylic Distemper | 1 Kilogram Packet | Distemper | Multipurpose Use | Durable Base Coat',
     subtitle: 'Strong adhesion, fast-drying, and eco-safe formula for both interior and exterior surfaces.',
     features: ['Smooth matt finish', 'Unique colour experience', 'Good washability'],
     image: distemper,
   },
   {
     id: 7,
-    title: 'Creation Som Acrylic Distemper | 1 - 4 Kilogram Packet | Distemper | Multipurpose Use | Durable Base Coat | Ideal for Large-Scale Projects',
-    subtitle: 'Strong adhesion, fast-drying, and eco-safe formula for both interior and exterior surfaces.',
-    features: ['Smooth matt finish', 'Unique colour experience', 'Good washability'],
-    image: som,
-  },
-  {
-    id: 8,
     title: 'Eco Ext./Int. Primer | 50 Litre Drum | Heavy-Duty Primer | Multipurpose Use | Durable Base Coat | Ideal for Large-Scale Projects',
     subtitle: 'Perfect for bulk application. Strong adhesion, fast-drying, and eco-safe formula.',
     features: ['Smooth matt finish', 'Unique colour experience', 'Good washability'],

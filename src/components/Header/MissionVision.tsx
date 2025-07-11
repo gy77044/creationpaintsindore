@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useSpring, animated } from '@react-spring/web';
-import Footer from '../Footer';
-import Header from './Header';
-
+import { animated, useSpring } from '@react-spring/web';
+import React, { useEffect, useRef, useState } from 'react';
+import assosrt from "../../assests/allimg/roughpaint.jpg"
+import blueWall from "../../assests/roler.png"
 // Define the URLs for the images
 // Correcting this based on the visual in Screenshot 2025-07-08 at 11.50.51 PM.jpg
 const MISSION_VISION_HERO_BG: string = 'https://www.creativepaints.in/upload/pages/2019082817103147.jpg'; // This URL seems to be a placeholder for the actual eye/paint image from the screenshot.
@@ -63,10 +62,10 @@ const MissionVision: React.FC = () => {
       {/* Hero Banner for Mission & Vision */}
       <div
         className="relative py-20 md:py-32 bg-cover bg-center text-white flex items-end justify-center" // Changed items-center to items-end
-        style={{ backgroundImage: `url(${MISSION_VISION_HERO_BG})` }}
+        style={{ backgroundImage: `url(${assosrt})` }}
       >
         {/* Overlay for background opacity */}
-        <div className="absolute inset-0 bg-black opacity-50"></div> {/* Black overlay with 50% opacity */}
+        <div className="absolute inset-0"></div> {/* Black overlay with 50% opacity */}
 
         <div className="relative z-10 container mx-auto px-4 text-center pb-8 md:pb-12"> {/* Added pb- for padding bottom */}
           <div className="inner-content-box">
@@ -88,7 +87,7 @@ const MissionVision: React.FC = () => {
           {/* Left Column - Image */}
           <div className="md:w-1/2 w-full flex justify-center md:justify-start">
             <img
-              src={MAN_PAINTING_IMAGE}
+              src={blueWall}
               alt="Man Painting"
               className="w-full max-w-sm h-auto object-cover shadow-lg"
             />
@@ -97,19 +96,19 @@ const MissionVision: React.FC = () => {
           {/* Right Column - Text Content */}
           <div className="md:w-1/2 w-full text-gray-700">
             <p className="mb-4 text-justify leading-relaxed">
-              <span className="font-semibold text-gray-900">Our mission</span> is to provide an outstanding customer experience through quality products, innovation, and best-in-case service. We believe our success will come from exceeding customers' expectations and earning their loyalty.
+              <span className="font-semibold text-gray-900">Our mission</span> At Creation Paints, our mission is to deliver an exceptional customer experience by offering superior-quality products, continuous innovation, and best-in-class service. We believe that our success lies in consistently exceeding customer expectations and earning their lasting trust and loyalty.
             </p>
             <p className="mb-6 text-justify leading-relaxed">
-              <span className="font-semibold text-gray-900">Our Vision</span> is to become the most admired Indian paint company, with globally recognized competencies.
+              <span className="font-semibold text-gray-900">Our Vision</span> To become the most admired paint company in India, recognized globally for our capabilities, quality, and commitment to excellence.
             </p>
 
             <h4 className="text-xl font-bold text-gray-800 mb-3">Value</h4>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Product Range</li>
-              <li>Product Quality</li>
-              <li>Innovation</li>
-              <li>Competitive Price</li>
-              <li>Services</li>
+              <li>Diverse Product Range</li>
+              <li>Innovation-Driven Approach</li>
+              <li>Affordable Pricing</li>
+              <li>Customer-Centric Services</li>
+              <li>Uncompromising Product Quality</li>
             </ul>
           </div>
         </div>

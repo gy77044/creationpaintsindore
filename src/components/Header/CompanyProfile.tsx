@@ -1,13 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useSpring, animated } from '@react-spring/web';
-import { Link } from 'react-router-dom';
-import Header from './Header';
-import Footer from '../Footer';
-
+import { animated, useSpring } from '@react-spring/web';
+import React, { useEffect, useRef, useState } from 'react';
+import COMPANY_IMAGE_URL from "../../assests/house.png";
+import BREADCRUMB_BACKGROUND_URL from "../../assests/allimg/roughpaint.jpg";
 // Define the URLs for the images
-const BREADCRUMB_BACKGROUND_URL: string = 'https://www.creativepaints.in/upload/pages/2019082817103147.jpg'; // This image seems to be the common header background
+// const BREADCRUMB_BACKGROUND_URL: string = 'https://www.creativepaints.in/upload/pages/2019082817103147.jpg'; // This image seems to be the common header background
 const CONTENT_BACKGROUND_PATTERN_URL: string = 'https://www.creativepaints.in/themes/images/pattern/project-description-pattern.jpg'; // Dotted pattern for content section
-const COMPANY_IMAGE_URL: string = 'https://www.creativepaints.in/upload/pages/20190902143442322.jpg'; // Image of the company building
+// const COMPANY_IMAGE_URL: string = 'https://www.creativepaints.in/upload/pages/20190902143442322.jpg'; // Image of the company building
 
 // Helper component for the counting animation (typed for TSX)
 interface NumberCounterProps {
@@ -65,7 +63,7 @@ const CompanyProfile: React.FC = () => {
         style={{ backgroundImage: `url(${BREADCRUMB_BACKGROUND_URL})` }}
       >
         {/* Overlay for background opacity */}
-        <div className="absolute inset-0 bg-black opacity-50"></div> {/* Black overlay with 50% opacity */}
+        <div className="absolute inset-0 "></div> {/* Black overlay with 50% opacity */}
 
         <div className="relative z-10 container mx-auto px-4 text-center pb-8 md:pb-12"> {/* Added pb- for padding bottom */}
           <div className="inner-content-box">
@@ -84,11 +82,11 @@ const CompanyProfile: React.FC = () => {
       {/* Main Content Area (from previous AboutUs component) */}
       <div
         className="relative py-16 md:py-24 bg-gray-50 overflow-hidden"
-        style={{
-          backgroundImage: `url(${CONTENT_BACKGROUND_PATTERN_URL})`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: 'auto',
-        }}
+        // style={{
+        //   backgroundImage: `url(${CONTENT_BACKGROUND_PATTERN_URL})`,
+        //   backgroundRepeat: 'repeat',
+        //   backgroundSize: 'auto',
+        // }}
       >
         {/* Main Content Layout - Image and Text */}
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start gap-12">
@@ -96,7 +94,7 @@ const CompanyProfile: React.FC = () => {
           <div className="md:w-1/2 w-full flex justify-center md:justify-start">
             <img
               src={COMPANY_IMAGE_URL}
-              alt="Creative Paints Company Building"
+              alt="Creation Paints Company Building"
               className="w-full max-w-md h-auto object-cover shadow-lg"
             />
           </div>
@@ -113,13 +111,13 @@ const CompanyProfile: React.FC = () => {
                 color: 'transparent',
               }}
             >
-              Bringing Imagination to surface, Quality Products at Quality Prices, Customer satisfaction is what we prefer
+              About Creation Paints
             </h3>
             <p className="mb-4 text-justify leading-relaxed">
-              Creative Paints Pvt. Ltd. manufactures a wide range of paints for decorative use and also provides solutions to industrial requirements. The company has come a long way since its beginning back in 1992 starting from supplying the basic raw material required in the manufacturing of paints having a wide range of products in Paints Segment. After being successful in supplying raw material to multiple manufacturers, a step towards further integration was taken and a paint manufacturing unit was established. The company reflects the spirit of its Chairman Director Mr. Sanjay Agrawal who has redefined a brand in the market since 2003. The only paint company in M.P. region with a consistent track record of being one of the fastest growing companies, from past few years.
+              Creation Paints is a leading manufacturer of decorative paint products in India, headquartered in Madhya Pradesh. Founded in 2024, we began our journey with a clear mission — to establish a strong presence in the decorative paints industry. Since then, our dedication to quality, innovation, and customer satisfaction has been the driving force behind our continued success.
             </p>
             <p className="text-justify leading-relaxed">
-              We carry out business activities all over the country with headquarters at Indore (M.P.).
+              We operate our business nationwide, with our headquarters located in Indore, Madhya Pradesh.
             </p>
           </div>
         </div>
@@ -128,19 +126,19 @@ const CompanyProfile: React.FC = () => {
         <div className="container mx-auto px-4 mt-16 md:mt-24">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="p-4">
-              <NumberCounter endValue={2154} />
+              <NumberCounter endValue={1000} />
               <p className="text-gray-600 text-lg">Dealers & Distributors</p>
             </div>
             <div className="p-4">
-              <NumberCounter endValue={1527} />
+              <NumberCounter endValue={250} />
               <p className="text-gray-600 text-lg">Working Locations</p>
             </div>
             <div className="p-4">
-              <NumberCounter endValue={53} />
+              <NumberCounter endValue={10} />
               <p className="text-gray-600 text-lg">Turnkey Projects</p>
             </div>
             <div className="p-4">
-              <NumberCounter endValue={50} />
+              <NumberCounter endValue={20} />
               <p className="text-gray-600 text-lg">Working Members</p>
             </div>
           </div>

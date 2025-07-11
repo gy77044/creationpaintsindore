@@ -51,9 +51,8 @@ const PaintProductCards: React.FC = () => {
       <ParallaxSection image={greenbalti}  text="Design Your Dream Home" text1="Creation Exterior Emulsion | Weather-Resistant Finish | Durable Exterior Paint | Rich Sheen | UV Protection | Vibrant Colors for Outer Walls" />
       <ParallaxSection image={pinkbalti} text="Eco-friendly Colors" text1="CREATION Interior Emulsion | Smooth Matte Finish | Elegant Wall Paint | Easy-to-Clean | Low Odor | Rich Colors for Interior Walls" />
       <ParallaxSection image={acrylicbalti} text="Discover Beautiful Interiors" text1="CREATION Acrylic Primer | Interior & Exterior Use | Superior Adhesion | Smooth Base Coat | Quick Dry | Enhances Paint Durability" />
-      <ParallaxSection image={orangebalti} text="Design Your Dream Home" text1="CREATION Acrylic Distemper | Smooth Matte Finish | Affordable Wall Paint | Easy Application | Quick Dry | Ideal for Interiors', subtitle: 'CreationPaints Acrylic Distemper delivers a smooth, matte finish at an economical price. Perfect for interior walls, it offers easy application, quick drying, and vibrant coverage"/>
-      <ParallaxSection image={dd} text="Best Wall Distemper" text1="Creation Acrylic Distemper | 1 - 4 Kilogram Packet | Distemper | Multipurpose Use | Durable Base Coat | Ideal for Large-Scale Projects" />
-      <ParallaxSection image={som} text="Best Acrylic Distemper" text1="Creation Som Acrylic Distemper | 1 - 4 Kilogram Packet | Distemper | Multipurpose Use | Durable Base Coat | Ideal for Large-Scale Projects" />
+      <ParallaxSection image={orangebalti} text="Design Your Dream Home" text1="CREATION Acrylic Distemper | Smooth Matte Finish | Affordable Prices | Easy Application | Quick Dry | Ideal for Interiors', subtitle: 'CreationPaints Acrylic Distemper delivers a smooth, matte finish at an economical price. Perfect for interior walls, it offers easy application, quick drying, and vibrant coverage"/>
+      <ParallaxSection image={dd} text="Best Wall Distemper" text1="Creation Acrylic Distemper | 1 Kilogram Packet | Distemper | Multipurpose Use | Durable Base Coat"/>
       <ParallaxSection image={tank} text="Eco-friendly Colors" text1="Eco Ext./Int. Primer | 50 Litre Drum | Heavy-Duty Primer | Multipurpose Use | Durable Base Coat | Ideal for Large-Scale Projects" />
     </div>
   );

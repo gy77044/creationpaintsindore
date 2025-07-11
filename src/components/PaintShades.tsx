@@ -9,16 +9,16 @@ const PaintShades = () => {
 const luxuryEmulsionColors = [
   { name: 'Sporty Yellow', code: '#FFD700' },
   { name: 'Yellow Choice', code: '#FFEA00' },
-  { name: 'Mango Mood', code: '#FFA500' },
+  { name: 'Mango Mood', code: '#f58f32' },
   { name: 'Sunrise', code: '#FF4500' },
-  { name: 'Signal Red', code: '#C41E3A' },
-  { name: 'Terracoatta', code: '#E2725B' },
+  { name: 'Signal Red', code: '#AF312A' },
+  { name: 'Terracotta', code: '#E2725B' },
   { name: 'Copper Leaf', code: '#B87333' },
   { name: 'Brick Brown', code: '#964B00' },
-  { name: 'Mehorrn', code: '#552F2F' },      // assuming a dark brown/maroon
-  { name: 'Mughal Green', code: '#006400' },
+  { name: 'Marroon', code: '#552F2F' },      // assuming a dark brown/maroon
+  { name: 'Moghal Green', code: '#006400' },
   { name: 'Mehandi', code: '#6E750E' },
-  { name: 'Reval', code: '#7F00FF' },        // assuming violet
+  { name: 'Revel', code: '#7F00FF' },        // assuming violet
   { name: 'Sapphire', code: '#0F52BA' },
   { name: 'Oxford Blue', code: '#002147' }
 ];
@@ -31,25 +31,25 @@ const acrylicDistemperColors = [
   { name: 'Daffodil', code: '#FFFF31' },
   { name: 'Rose Pink', code: '#FF66CC' },
   { name: 'Lemon Bright', code: '#FFF700' },
-  { name: 'Jatpuri', code: '#EAA221' }, // assumption
+  { name: 'Jaipuri', code: '#EAA221' }, // assumption
   { name: 'Wild Lilac', code: '#B39EB5' },
   { name: 'Sky Blue', code: '#87CEEB' },
   { name: 'New Pastel Green', code: '#77DD77' },
-  { name: 'CH Green', code: '#228B22' }, // assumption
+  { name: 'CH. Green', code: '#228B22' }, // assumption
   { name: 'Electric Blue', code: '#7DF9FF' },
   { name: 'Light Green', code: '#90EE90' },
   { name: 'Dark Blue', code: '#00008B' },
-  { name: 'Aquamarine', code: '#7FFFD4' },
-  { name: 'Deep Aquamarine', code: '#43B3AE' },
+  { name: 'Aquamarrine', code: '#7FFFD4' },
+  { name: 'Deep Aquamarrine', code: '#43B3AE' },
   { name: 'Coffee', code: '#6F4E37' },
   { name: 'Rust', code: '#B7410E' },
-  { name: 'Signal Red', code: '#C41E3A' }
+  { name: 'Signal Red', code: '#AF312A' }
 ];
 
 const bothAvailableColors = [
   { name: 'Liril', code: '#00FFAA' },            // inspired by the Liril soap green
   { name: 'Sporty Pink', code: '#FF69B4' },
-  { name: 'Megnta', code: '#FF00FF' },           // assuming typo for 'Magenta'
+  { name: 'Magenta', code: '#FF00FF' },           // assuming typo for 'Magenta'
   { name: 'Lemon Souffle', code: '#FFFACD' },
   { name: 'Nagpur Orange', code: '#FFA500' },
   { name: 'Jolly Holly', code: '#228B22' }       // holly green
@@ -63,14 +63,14 @@ const metalicEmulsionColors = [
   { name: 'CREATION RED', code: '#D2042D' },
   { name: 'PURPLE', code: '#800080' },
   { name: 'SPORTY YELLOW', code: '#FFD700' },
-  { name: 'SIGNAL RED', code: '#C41E3A' },
+  { name: 'SIGNAL RED', code: '#AF312A' },
   { name: 'NAGPUR ORANGE', code: '#FFA500' },
-  { name: 'MEGENTA', code: '#FF00FF' },         // assuming typo for Magenta
+  { name: 'MAGENTA', code: '#FF00FF' },         // assuming typo for Magenta
   { name: 'LIRIL', code: '#00FFAA' },
   { name: 'DARK GREEN', code: '#006400' },
   { name: 'SPORTY PINK', code: '#FF69B4' },
   { name: 'OXFORD BLUE', code: '#002147' },
-  { name: 'CRIMSON', code: '#DC143C' },
+  { name: 'CRIMSON RED', code: '#DC143C' },
   { name: 'BLACK', code: '#000000' }
 ];
 

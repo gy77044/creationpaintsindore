@@ -66,7 +66,7 @@ const ContactUs: React.FC = () => {
     <section id="contact" className="w-full scroll-smooth py-16 flex justify-center items-center min-h-[65vh]">
       <div className="w-full max-w-6xl rounded-3xl bg-white shadow-xl mx-2 flex flex-col md:flex-row overflow-hidden">
         {/* Left: Feature List */}
-        <div className="bg-[#eef1f1] flex-1 p-8 md:p-12 flex flex-col justify-center rounded-2xl md:rounded-none md:rounded-l-3xl">
+        {/* <div className="bg-[#eef1f1] flex-1 p-8 md:p-12 flex flex-col justify-center rounded-2xl md:rounded-none md:rounded-l-3xl">
           <ul className="space-y-8">
             {features.map((feature) => (
               <li key={feature.title} className="flex items-start gap-5">
@@ -84,7 +84,7 @@ const ContactUs: React.FC = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
 
         {/* Right: Form */}
         <div className="flex-1 p-8 md:p-12 flex flex-col justify-center">

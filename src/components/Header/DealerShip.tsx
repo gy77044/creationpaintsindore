@@ -111,7 +111,7 @@ const Dealership: React.FC = () => {
       <div className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <p className="text-gray-700 text-lg mb-12 text-center max-w-2xl mx-auto">
-            We are pleased to associate with our esteemed customer. Please fill all the details of the form and our representative will respond you soon.
+            We’re delighted to collaborate with you in bringing color to life. Please complete the form below, and one of our paint specialists will get in touch with you shortly
           </p>
 
           <form onSubmit={handleSubmit} className="bg-gray-50 p-8 md:p-12 shadow-lg rounded-lg">

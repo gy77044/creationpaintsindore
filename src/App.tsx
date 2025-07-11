@@ -38,7 +38,7 @@ function App() {
         <Route path="/dealership" element={<Dealership />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/shade" element={<Shades />} />
+        {/* <Route path="/shade" element={<Shades />} /> */}
         <Route path="/contact" element={<Contact />} />
         {/* <Route path="/categories" element={<Categories />} /> */}
       </Routes>
