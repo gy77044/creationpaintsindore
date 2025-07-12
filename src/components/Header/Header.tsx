@@ -9,7 +9,7 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { href: '/', label: 'Home', dropdown: [{ name: 'Default', link: '/' }] },
-  { href: '/shade', label: 'Shades', dropdown: [{ name: 'Default', link: '/' }] },
+  // { href: '/shade', label: 'Shades', dropdown: [{ name: 'Default', link: '/' }] },
   {
     href: '/#about',
     label: 'About Us',

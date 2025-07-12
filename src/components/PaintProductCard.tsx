@@ -8,6 +8,7 @@ import tank from '../assests/tank.png';
 import greenbalti from '../assests/greenbalti.png';
 import acrylicbalti from '../assests/acrylicbalti.png';
 import distemper from '../assests/dd.jpg';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 const products = [
   {
@@ -131,6 +132,20 @@ const PaintProductCards: React.FC = () => {
               {products.map((product) => (
                 <ProductCard key={product.id} {...product} />
               ))}
+            </div>
+            <div className="absolute -bottom-6 right-4 flex gap-2 mt-4">
+              <button
+                onClick={() => scroll('left')}
+                className="bg-white/80 p-2 rounded-full hover:bg-white shadow-md transition"
+              >
+                <ChevronLeftIcon className="w-5 h-5 text-gray-800" />
+              </button>
+              <button
+                onClick={() => scroll('right')}
+                className="bg-white/80 p-2 rounded-full hover:bg-white shadow-md transition"
+              >
+                <ChevronRightIcon className="w-5 h-5 text-gray-800" />
+              </button>
             </div>
           </div>
         )}
