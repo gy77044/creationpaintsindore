@@ -26,11 +26,26 @@ const Hero: React.FC<HeroProps> = ({ imageData }) => {
   };
 
   return (
-    <div className="w-[90dvw] h-[80dvh] mx-auto border-4 border-white bg-white transition-all duration-700 ease-in-out hover:shadow-[6px_6px_10px_5px_gray] overflow-hidden flex">
+    <div
+
+     className="
+        w-[90dvw] mx-auto border-4 border-white bg-white 
+        transition-all duration-700 ease-in-out 
+        hover:shadow-[6px_6px_10px_5px_gray] 
+        overflow-hidden 
+        flex flex-col sm:flex-row sm:h-auto
+      "
+    //  className="w-[90dvw] h-[80dvh] mx-auto border-4 border-white bg-white transition-all duration-700 ease-in-out hover:shadow-[6px_6px_10px_5px_gray] overflow-hidden flex"
+     >
       {imageData.map((item, index) => (
         <div
           key={index}
-          className="group relative h-full flex-shrink-0 transition-all duration-500 ease-in-out hover:w-[50%] w-[33.4%] border-l-2 border-white overflow-hidden"
+           className="
+            group relative flex-shrink-0 transition-all duration-500 ease-in-out 
+            w-full sm:w-1/3 sm:hover:w-1/2 
+            h-[80dvh] border-t-2 sm:border-t-0 sm:border-l-2 border-white overflow-hidden
+          "
+          // className="group relative h-full flex-shrink-0 transition-all duration-500 ease-in-out hover:w-[50%] w-[33.4%] border-l-2 border-white overflow-hidden"
         >
           <img
             src={item.src}
