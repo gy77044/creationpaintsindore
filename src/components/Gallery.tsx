@@ -1,12 +1,10 @@
-import Footer from './Footer'
-import Header from './Header/Header'
-import Hero from './StickSlider'
 import NaturalGreen from "../assests/allimg/NaturalGreen.jpeg";
 import skyblueIndoor from "../assests/allimg/skyblueIndoor.jpeg";
 import yelloIndor from "../assests/allimg/yelloIndor.jpeg";
 import blkbug from "../assests/blkbug.png";
 import grblati from "../assests/colorful-paint-cans.jpg";
 import mbalti from "../assests/multiplebalti.png";
+import Hero from './StickSlider';
 
  const imageData = [
   { title: "Luxury", src: NaturalGreen },
@@ -23,7 +21,6 @@ import mbalti from "../assests/multiplebalti.png";
 const Gallery = () => {
   return (
     <>
-
      <h2 id="gallery" className=" my-10 scroll-smooth text-3xl font-bold text-center mb-10 text-[#161e32] hover-shadow">
         Gallery
       </h2>
@@ -31,8 +28,6 @@ const Gallery = () => {
         Discover how CreationPaints brings walls to life — browse real spaces, creative finishes, and inspiring color combinations captured through our customer gallery.
       </p>
       <Hero imageData={imageData} />
-
-      {/* Color Palette */}
       <section id="shade" className="scroll-smooth px-6 md:px-20 py-16 text-[#161e32] bg-white">
         <Hero imageData={imageData1} />
       </section>

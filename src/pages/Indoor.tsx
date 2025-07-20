@@ -11,7 +11,6 @@ import redRoom from "../assests/redRoom.jpeg";
 import skyRoom from "../assests/skyblueRoom.jpeg";
 import PaintDetailSection from "../components/PaintDetailSection";
 import Hero from "../components/StickSlider";
-import { div } from "framer-motion/client";
 
 const sections = [
   {
@@ -78,19 +77,19 @@ const Indoor = () => {
         return (
           <div className="overflow-x-hidden">
             <motion.div
-            key={section.id}
-            ref={ref}
-            initial={{ x: 100, opacity: 0 }}
-            animate={isInView ? { x: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          >
-            <PaintDetailSection
-              id={section.id}
-              paintImg={section.img}
-              PaintTitle={section.title}
-              PaintDetail={section.detail}
-            />
-          </motion.div>
+              key={section.id}
+              ref={ref}
+              initial={{ x: 100, opacity: 0 }}
+              animate={isInView ? { x: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            >
+              <PaintDetailSection
+                id={section.id}
+                paintImg={section.img}
+                PaintTitle={section.title}
+                PaintDetail={section.detail}
+              />
+            </motion.div>
           </div>
         );
       })}

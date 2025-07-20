@@ -1,18 +1,14 @@
 import React from "react";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import acrylicbalti from '../assests/acrylicbalti.png';
 import blackbalti from '../assests/blackbalti.png';
+import distemper from '../assests/dd.jpg';
+import greenbalti from '../assests/greenbalti.png';
 import orangebalti from '../assests/orangebalti.png';
 import pinkbalti from '../assests/pinkbalti.png';
 import smallbalti from '../assests/smallbalti.png';
 import tank from '../assests/tank.png';
-import greenbalti from '../assests/greenbalti.png';
-import acrylicbalti from '../assests/acrylicbalti.png';
 import PaintDetailSection from "../components/PaintDetailSection";
-import distemper from '../assests/dd.jpg';
-import som from '../assests/som.jpg';
-import { useLocation, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 const blogCards = [
   {
     id: 0,
@@ -86,7 +82,6 @@ const ProductPage: React.FC = () => {
               <br/>
                <PaintDetailSection id={product?.[0].id}  paintImg={product?.[0].img} PaintTitle={product?.[0].title} PaintDetail={product?.[0].description}/>
     <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">      
-      {/* Blog Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         {blogCards.map((card, index) => (
           <Link to={`/product#${card.id}`} className="rounded overflow-hidden shadow-lg flex flex-col">

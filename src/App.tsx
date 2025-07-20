@@ -1,26 +1,24 @@
 import { Route, Routes } from "react-router-dom";
-import "./components/mainscreen.scss";
-import Categories from "./pages/Categories";
-import Indoor from "./pages/Indoor";
-import Outdoor from "./pages/Outdoor";
-import HomeScreen from "./components/HomeScreen";
-import ProductPage from "./pages/ProductPage";
-import ScrollToTop from "./components/ScrollRenderWrapper";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Gallery from "./components/Gallery";
 import CompanyProfile from "./components/Header/CompanyProfile";
+import Dealership from "./components/Header/DealerShip";
+import Header from "./components/Header/Header";
 import MissionVision from "./components/Header/MissionVision";
 import Network from "./components/Header/Network";
-import Dealership from "./components/Header/DealerShip";
-import Gallery from "./components/Gallery";
-import Shades from "./components/Shades";
-import Contact from "./components/Contact";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer";
+import HomeScreen from "./components/HomeScreen";
+import "./components/mainscreen.scss";
+import ScrollToTop from "./components/ScrollRenderWrapper";
+import Indoor from "./pages/Indoor";
+import Outdoor from "./pages/Outdoor";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
     <>
       <ScrollToTop />
-      <Header/>
+      <Header />
       <Routes>
         <Route
           path="/"
@@ -38,11 +36,9 @@ function App() {
         <Route path="/dealership" element={<Dealership />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/gallery" element={<Gallery />} />
-        {/* <Route path="/shade" element={<Shades />} /> */}
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/categories" element={<Categories />} /> */}
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }

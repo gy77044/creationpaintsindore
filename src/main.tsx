@@ -8,7 +8,8 @@ if (!rootElement) {
   throw new Error("Failed to find root element");
 }
 
-createRoot(rootElement).render(<BrowserRouter>
-<App/> 
-</BrowserRouter>
+createRoot(rootElement).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );

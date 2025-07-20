@@ -10,9 +10,7 @@ import imgIndoor from "../assests/WhiteGreenRoom.jpeg";
 import AboutCompany from "./AboutCompany";
 import Banner from "./Banner/Banner";
 import ProductHighlight from "./Banner/ProductHighlight";
-import Footer from "./Footer";
 import GetInTouchForm from "./GetInTouchForm";
-import Header from "./Header/Header";
 import ImageCard from "./ImageCard";
 import MapLocation from "./MapLocation";
 import PaintProductCards from "./PaintProductCard";
@@ -36,7 +34,6 @@ const HomeScreen = () => {
       </div>
       <ProductHighlight />
 
-      {/* Animated Section */}
       <section
         ref={sectionRef}
         className="min-h-screen w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 bg-white p-4 md:p-12 font-Georgia overflow-x-hidden"
@@ -76,24 +73,29 @@ const HomeScreen = () => {
             Your Walls Deserve the Best Product
           </h2>
           <p className="text-center mt-2 text-base sm:text-lg text-gray-600 animate-new-color-change">
-            High-performance coatings that don’t just beautify— they protect, preserve, and impress.
+            High-performance coatings that don’t just beautify— they protect,
+            preserve, and impress.
           </p>
           <PaintProductCards />
         </div>
       </div>
 
-      <h2 id="gallery" className="scroll-smooth text-3xl font-bold text-center mb-10 text-[#161e32] hover-shadow">
+      <h2
+        id="gallery"
+        className="scroll-smooth text-3xl font-bold text-center mb-10 text-[#161e32] hover-shadow"
+      >
         Gallery
       </h2>
       <p className="mx-1 text-center mt-2 text-base sm:text-lg text-gray-600 animate-new-color-change">
-        Discover how CreationPaints brings walls to life — browse real spaces, creative finishes, and inspiring color combinations captured through our customer gallery.
+        Discover how CreationPaints brings walls to life — browse real spaces,
+        creative finishes, and inspiring color combinations captured through our
+        customer gallery.
       </p>
       <Hero imageData={imageData} />
       <AboutCompany />
       <GetInTouchForm />
       <MapLocation />
 
-      {/* Brochure and Social Icons Floating */}
       <div className="fixed -right-[83px] hover:-right-[35px] top-1/3 transform -translate-y-1/2 flex flex-col items-center space-y-4 z-50 transition-all delay-700">
         <a
           href="#"
